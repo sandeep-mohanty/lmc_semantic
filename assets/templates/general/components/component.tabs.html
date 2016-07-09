@@ -1,0 +1,10 @@
+
+<div class="container-fluid" style="background-color:#626271;  padding-left:40px;  margin-top:0px; width:100%">
+  <ul class="nav nav-pills">
+    <li style="height:60px;padding-top:10px;" *ngFor = "let tab of tabs; let i = index" [ngClass] = "{active: (selectedTab === tab.name)}" tabindex ="{{i + 1}}" (focus)="setSelectedTab(tab.name)">
+        <a>
+            {{tab.displayName}} 
+        </a>
+    </li>
+  </ul>
+</div>

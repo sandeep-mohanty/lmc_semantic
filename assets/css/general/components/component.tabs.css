@@ -1,0 +1,36 @@
+a {
+    color:#e6e6f0;;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.active {
+    background-color: #00ad21;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.nav-pills > li.active:hover {
+    background-color: #00ad21;
+}
+
+.nav-pills > li > a:hover {
+    color:lime;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.nav li  {
+    text-align: center;
+}

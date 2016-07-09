@@ -1,0 +1,35 @@
+    <!-- Header Section -->
+    <section id="header">
+
+        <!-- HEADER AND ASSET COUNT -->
+        <header class="page-header fix-top">
+
+            <!-- LEXMARK LOGO -->
+            <a href="http://www.lexmark.com" style="text-decoration: none; padding-right: 20px;">
+                <img src="assets/images/LexmarkLogo_RGB_Reversed.svg" style="width: 150px; padding-bottom:9px" aria-hidden="true">
+            </a>
+
+            <!-- Application Name -->
+            <span class="visible-lg-inline h3">{{pageTitle}}</span>
+
+            <!-- User Icon and dropdown icon on the right -->
+            <span style="float:right;">
+                <span class="dropdown">
+
+                    <!--User Icon and drop down arrow -->
+                    <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-user green visible-lg-inline">
+                            <span style="padding-left: 1px; font-family:&quot;TP Hero&quot;, Helvetica, Arial, sans-serif;">{{user}}</span>
+                            <span class="icon-disclosure_down_triangle green" style="vertical-align: middle;"></span>
+                        </span>
+                    </a>
+
+                    <!--Dropdown menu options -->
+                    <ul class="dropdown-menu pull-right" >
+                        <li *ngFor = "let option of userDropdownOptions"><a href=""><span style="padding-left:10px;">{{option.name}}</span></a></li>
+                    </ul>
+                </span>
+            </span>
+
+        </header>
+    </section>

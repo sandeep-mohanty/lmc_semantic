@@ -1,14 +1,77 @@
-.well {
-    background-color: #97A097;
+.green {
+    color: #3af23a !important;
+    border-color: #3af23a !important;
 }
 
-.title {
-    color:black;
-    font-weight:bold;
-    font-family: 'Segoe UI';
+.dark-green {
+    color: #008a44 !important;
+    border-color: #008a44 !important;
 }
-.page-header-title {
-    font-weight:bold;
-    font-family: 'Segoe UI';
-    font-size: xx-large;
+
+.white {
+    background: white;
+}
+
+/** This is for the filter 'bubbles' on the Assets page **/
+.section-details .pager {
+    margin: 10px 0 0;
+}
+
+.filter .list-group {
+    padding-left: 0;
+    margin: 0;
+}
+.filter .list-group-item {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/** Table styling... **/
+thead th {
+    background-color: #c9c9d1;
+    color: black;
+}
+
+.table-bordered {
+    border: 1px solid #c9c9d1;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #eff0f6;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #00ad21;
+}
+
+.table {
+    background-color: white;
+}
+
+/** Button styling **/
+.btn-dark-gray {
+    background-color: #7e7e85;
+    color: #c9c9d1;
+	
+}
+
+.btn-ldd:hover {
+  background: #eff0f6;
+ }
+
+.btn-light-gray {
+    background-color: #eff0f6;
+    color: #44434e;
+}
+
+.btn-light-gray:hover, .btn-dark-gray:hover,
+.btn-light-gray:focus, .btn-dark-gray:focus {
+    color: #44434e;
+    text-decoration: none;
+}
+
+/** custom vertical divider **/
+.border-left {
+    border-left: 1px solid lightgray;
 }

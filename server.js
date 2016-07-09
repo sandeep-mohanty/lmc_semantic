@@ -48,16 +48,38 @@ var colors = ["Red"];
 		res.send(JSON.stringify(colors));
 	});
     
-    app.get("/firstroutercomponent", function(req, res){
+    app.get("/es", function(req, res){
 		res.sendFile(__dirname + "/index.html");
 	});
     
-    app.get("/secondroutercomponent", function(req, res){
+    app.get("/fr", function(req, res){
 		res.sendFile(__dirname + "/index.html");
 	});
     
-    app.get("/thirdroutercomponent", function(req, res){
-		res.sendFile(__dirname + "./index.html");
+    app.get("/it", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    app.get("/en", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    
+    app.get("/de", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    
+    app.get("/ko", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    app.get("/ja", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    
+    app.get("/zh", function(req, res){
+		res.sendFile(__dirname + "/index.html");
+	});
+    
+    app.get("/zh_tw", function(req, res){
+		res.sendFile(__dirname + "/index.html");
 	});
     
     app.post("/colors", function(req,res){
