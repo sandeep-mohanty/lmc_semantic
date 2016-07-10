@@ -4,7 +4,6 @@
     <!-- List of all possible view tabs but only one will be active at any point in time -->
     <section>
         <lmc-app-clientgroups *ngIf = "(activeTab.name === TAB_NAMES.CLIENT_GROUPS)" [data] = "tabData[TAB_NAMES.CLIENT_GROUPS]"></lmc-app-clientgroups>
-        <lmc-app-csfapps *ngIf = "(activeTab.name === TAB_NAMES.CSFAPPS)" [data] = "tabData[TAB_NAMES.CSFAPPS]"></lmc-app-csfapps>
         <lmc-app-devicegroups *ngIf = "(activeTab.name === TAB_NAMES.DEVICE_GROUPS)" [data] = "tabData[TAB_NAMES.DEVICE_GROUPS]"></lmc-app-devicegroups>
         <lmc-app-devices *ngIf = "(activeTab.name === TAB_NAMES.DEVICES)" [data] = "tabData[TAB_NAMES.DEVICES]"></lmc-app-devices>
         <lmc-app-eforms *ngIf = "(activeTab.name === TAB_NAMES.EFORMS)" [data] = "tabData[TAB_NAMES.EFORMS]"></lmc-app-eforms>

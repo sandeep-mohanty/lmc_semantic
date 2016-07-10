@@ -10,7 +10,6 @@ if (! window.sessionStorage) {
     console.log("Your browser do not support session storage, hence language can't be set");
 } else {
     let lang = window.location.pathname.split("/")[1];
-    console.log(lang);
     window.sessionStorage.setItem("lmc-app-language",lang);
 }
 

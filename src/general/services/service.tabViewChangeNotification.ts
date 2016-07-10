@@ -9,13 +9,12 @@ export class TabViewChangeNotificationService {
        this.tabChanged = new EventEmitter<TabChangeNotificationObject>();
     }
     
-    broadcast(broadcastObject:TabChangeNotificationObject): void {
-        
+    broadcast(broadcastObject:TabChangeNotificationObject):void {
         this.tabChanged.emit(broadcastObject);
     }
     
-    subscribe(eventHandlerFunction):void {
-        this.tabChanged.subscribe(eventHandlerFunction);
+    subscribe(eventHandlerFunction):any {
+        return this.tabChanged.subscribe(eventHandlerFunction);
     }
-
+    
 }

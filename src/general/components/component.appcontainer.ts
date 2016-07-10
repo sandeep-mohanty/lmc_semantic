@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { LMCTabsComponent } from './component.tabs';
 import { TabViewChangeNotificationService } from '../services/service.tabViewChangeNotification';
 import { ClientGroupsComponent } from '../../clientgroups/components/component.clientgroups';
@@ -29,15 +29,16 @@ import { LMCTabChangeNotifier } from './tabChangeNotifier';
     ],
     providers: [TabViewChangeNotificationService]
 })
-export class LMCAppContainer extends  LMCTabChangeNotifier implements OnInit {
+export class LMCAppContainer extends  LMCTabChangeNotifier implements OnInit, OnDestroy {
     
     private activeTab:{name:string, data ?: any};
     private updateView:any;
     private TAB_NAMES:any;
     private tabData:any;
+    private subscription:any;
     
     constructor(notificationService:TabViewChangeNotificationService) { 
-        
+
         super(notificationService);
         this.updateView = (activeTabInfo:TabChangeNotificationObject) => {
             this.activeTab.name = activeTabInfo.tabName;
@@ -46,7 +47,10 @@ export class LMCAppContainer extends  LMCTabChangeNotifier implements OnInit {
                 this.tabData[this.activeTab.name] = this.activeTab.data;
             }
         };
-        this.TAB_NAMES = TAB_NAMES;
+        this.TAB_NAMES = TAB_NAMES;        
+    }
+    
+    ngOnInit() { 
         
         // Initialize all data for the tabs to null
         this.tabData = {};
@@ -57,14 +61,15 @@ export class LMCAppContainer extends  LMCTabChangeNotifier implements OnInit {
             }
         }
         
-        this.notificationService.subscribe(this.updateView);
+        this.subscription = this.notificationService.subscribe(this.updateView);
         this.activeTab = {
             name: TAB_NAMES.HOME,
             data: null
         };
-
     }
     
-    ngOnInit() { }
-
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
+    
 }
